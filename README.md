@@ -47,7 +47,3 @@ Output goes to `dist/` — deploy anywhere static (Vercel, GitHub Pages, Netlify
 - Vite + React 19
 - Hand-rolled SVG radar chart (no charting libraries)
 - Client-side only — no backend, no API keys
-
-## Attribution
-
-Framework adapted from "The Seven Axes of Hard" by Nate (Feb 2026).
