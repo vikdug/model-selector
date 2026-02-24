@@ -1,71 +1,49 @@
 import { AXES } from '../data/axes';
 import AxisSlider from './AxisSlider';
 
-export default function AssessmentSection({ scores, onScoreChange, onReset, hasScores }) {
+export default function AssessmentSection({ scores, onScoreChange, onReset, hasScores, selections, onToggleActivity, manualOverride }) {
   return (
-    <section id="assessment" style={{ maxWidth: 680, margin: "0 auto", padding: "40px 20px" }}>
-      <div style={{ textAlign: "center", marginBottom: 32 }}>
-        <div
-          style={{
-            fontSize: 10,
-            fontFamily: "var(--font-mono)",
-            color: "var(--cyan)",
-            textTransform: "uppercase",
-            letterSpacing: "0.12em",
-            marginBottom: 8,
-            fontWeight: 600,
-          }}
-        >
-          Self-Assessment
-        </div>
-        <h2
-          style={{
-            margin: "0 0 8px",
-            fontSize: "clamp(22px, 4vw, 30px)",
-            fontWeight: 400,
-            fontFamily: "var(--font-serif)",
-            letterSpacing: "-0.01em",
-            color: "var(--text)",
-          }}
-        >
-          How hard is your work?
-        </h2>
-        <p
-          style={{
-            margin: 0,
-            fontSize: 13.5,
-            color: "var(--text-muted)",
-            maxWidth: 480,
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        >
-          Rate each axis based on how much of your daily work falls into that category.
-        </p>
-      </div>
-
-      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+    <section id="assessment" style={{ padding: "8px 0" }}>
+      <style>{`
+        @media (max-width: 768px) {
+          #assessment .axis-grid { grid-template-columns: 1fr !important; }
+        }
+        #assessment .axis-grid > div:last-child:nth-child(odd) {
+          grid-column: 1 / -1;
+        }
+      `}</style>
+      <div
+        className="axis-grid"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gap: 8,
+        }}
+      >
         {AXES.map((axis) => (
           <AxisSlider
             key={axis.id}
             axis={axis}
             value={scores[axis.id] || 0}
             onChange={onScoreChange}
+            selections={selections?.[axis.id] || []}
+            onToggleActivity={onToggleActivity}
+            isManual={manualOverride?.[axis.id] || false}
           />
         ))}
       </div>
 
       {hasScores && (
-        <div style={{ textAlign: "center", marginTop: 20 }}>
+        <div style={{ textAlign: "center", marginTop: 12 }}>
           <button
             onClick={onReset}
             style={{
               background: "transparent",
               border: "1px solid var(--border-light)",
               borderRadius: 6,
-              padding: "8px 20px",
+              padding: "5px 16px",
               color: "var(--text-muted)",
-              fontSize: 12,
+              fontSize: 11,
               fontFamily: "var(--font-mono)",
               cursor: "pointer",
               transition: "all 0.2s ease",

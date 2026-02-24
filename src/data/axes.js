@@ -10,6 +10,16 @@ export const AXES = [
     bestModel: "Gemini 3.1 Pro",
     prompt: "How much of your daily work requires multi-step logical deduction or first-principles analysis?",
     hint: "Complex analysis, optimization problems, scientific reasoning",
+    activities: [
+      { id: "reasoning-1", label: "Analyzing contracts" },
+      { id: "reasoning-2", label: "Debugging cascading failures" },
+      { id: "reasoning-3", label: "Financial modeling" },
+      { id: "reasoning-4", label: "Clinical trial design" },
+      { id: "reasoning-5", label: "Supply chain optimization" },
+      { id: "reasoning-6", label: "Algorithmic analysis" },
+      { id: "reasoning-7", label: "Tax strategy" },
+      { id: "reasoning-8", label: "Manufacturing root-cause analysis" },
+    ],
     description:
       "Multi-step logical deduction from first principles. Analyzing complex contracts across jurisdictions, multi-constraint optimization, novel scientific problems.",
     aiStatus:
@@ -28,6 +38,16 @@ export const AXES = [
     bestModel: "Opus 4.6 / Codex 5.3",
     prompt: "How much of your work is not intellectually hard, just large in scope and requiring sustained attention?",
     hint: "Auditing thousands of items, migrations, exhaustive reviews",
+    activities: [
+      { id: "effort-1", label: "Auditing thousands of contracts" },
+      { id: "effort-2", label: "Legacy migrations" },
+      { id: "effort-3", label: "Reviewing support transcripts" },
+      { id: "effort-4", label: "Reconciling records" },
+      { id: "effort-5", label: "Categorizing unstructured docs" },
+      { id: "effort-6", label: "Regression testing" },
+      { id: "effort-7", label: "Regulatory filings" },
+      { id: "effort-8", label: "Cloud resource inventory" },
+    ],
     description:
       "Not intellectually difficult, just large. Sustaining attention and thoroughness across a massive surface area without dropping things.",
     aiStatus:
@@ -46,6 +66,16 @@ export const AXES = [
     bestModel: "Opus 4.6 (agent teams)",
     prompt: "How much of your work involves aligning teams, routing tasks, and managing dependencies across people?",
     hint: "Cross-team decisions, stakeholder alignment, dependency management",
+    activities: [
+      { id: "coordination-1", label: "Cross-functional launches" },
+      { id: "coordination-2", label: "Managing engineering dependencies" },
+      { id: "coordination-3", label: "Aligning conflicting stakeholders" },
+      { id: "coordination-4", label: "Incident response coordination" },
+      { id: "coordination-5", label: "Company-wide rollouts" },
+      { id: "coordination-6", label: "Triaging requests" },
+      { id: "coordination-7", label: "Reorg planning" },
+      { id: "coordination-8", label: "Vendor synchronization" },
+    ],
     description:
       "Aligning teams, routing work across dependencies, managing information flow so the right people know the right things at the right time.",
     aiStatus:
@@ -64,6 +94,16 @@ export const AXES = [
     bestModel: "Frontier models (all)",
     prompt: "How much does your work depend on pattern recognition from years of domain-specific experience?",
     hint: "Undocumented quirks, tribal knowledge, production incident patterns",
+    activities: [
+      { id: "domain-1", label: "Rare disease diagnosis" },
+      { id: "domain-2", label: "Knowing which clauses get litigated" },
+      { id: "domain-3", label: "Production log pattern recognition" },
+      { id: "domain-4", label: "Supplier risk signals" },
+      { id: "domain-5", label: "Code smell detection" },
+      { id: "domain-6", label: "Credit assessment" },
+      { id: "domain-7", label: "Structural inspection" },
+      { id: "domain-8", label: "Regulatory reviewer preferences" },
+    ],
     description:
       "Pattern recognition from years of repetition. The senior engineer who's seen that stack trace before. The M&A attorney who's closed 300 deals.",
     aiStatus:
@@ -82,6 +122,16 @@ export const AXES = [
     bestModel: "No clear leader",
     prompt: "How often do you need to figure out what the real question is before you can answer it?",
     hint: "Strategy from contradictory signals, interpreting unstated needs",
+    activities: [
+      { id: "ambiguity-1", label: "Translating vague requirements" },
+      { id: "ambiguity-2", label: "Strategy from contradictory signals" },
+      { id: "ambiguity-3", label: "Scoping undefined projects" },
+      { id: "ambiguity-4", label: "Choosing between architectures" },
+      { id: "ambiguity-5", label: "Prioritizing with no data" },
+      { id: "ambiguity-6", label: "Interpreting board directives" },
+      { id: "ambiguity-7", label: "Competing priorities" },
+      { id: "ambiguity-8", label: "Diagnosing real churn reasons" },
+    ],
     description:
       "Figuring out what the question actually is. When the customer says 'better reporting' but means 'my boss needs to stop questioning my numbers.'",
     aiStatus:
@@ -100,6 +150,16 @@ export const AXES = [
     bestModel: "None reliable",
     prompt: "How much of your effectiveness depends on reading people, navigating politics, and calibrating tone?",
     hint: "Difficult conversations, negotiation, team morale, political navigation",
+    activities: [
+      { id: "emotional-1", label: "Delivering hard feedback" },
+      { id: "emotional-2", label: "Reading room opposition" },
+      { id: "emotional-3", label: "Navigating reorgs" },
+      { id: "emotional-4", label: "Delivering bad news to clients" },
+      { id: "emotional-5", label: "Mediating conflicts" },
+      { id: "emotional-6", label: "Calibrating transparency" },
+      { id: "emotional-7", label: "Building trust with skeptics" },
+      { id: "emotional-8", label: "Sensing disengagement" },
+    ],
     description:
       "Reading a boardroom. Knowing the CFO's silence means opposition. Delivering feedback to someone going through a divorce. Calibrating tone, timing, and transparency.",
     aiStatus:
@@ -118,6 +178,16 @@ export const AXES = [
     bestModel: "N/A \u2014 human only",
     prompt: "How often does your work require the courage to make unpopular calls or kill projects you've invested in?",
     hint: "Walking away from deals, career-risk decisions, values-driven choices",
+    activities: [
+      { id: "judgment-1", label: "Killing long-running projects" },
+      { id: "judgment-2", label: "Walking away from bad clients" },
+      { id: "judgment-3", label: "Saying no to your boss" },
+      { id: "judgment-4", label: "Choosing quality over targets" },
+      { id: "judgment-5", label: "Firing toxic high performers" },
+      { id: "judgment-6", label: "Admitting strategic mistakes" },
+      { id: "judgment-7", label: "Holding pricing" },
+      { id: "judgment-8", label: "Resisting executive pressure" },
+    ],
     description:
       "Killing a project your team spent 6 months building. Saying no to a lucrative client. Making the unpopular call. The bottleneck isn't computing the right answer \u2014 it's having the nerve to act on it.",
     aiStatus:
